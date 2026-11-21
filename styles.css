@@ -97,8 +97,18 @@ img { display: block; width: 100%; height: auto; }
 
 .project-text p { margin: 0 0 1em; max-width: 60ch; }
 
-.gallery { display: grid; gap: var(--gutter); }
-.gallery .thumb { aspect-ratio: 3 / 2; }
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+  align-items: start;
+}
+.gallery img { background: var(--placeholder); }
+.gallery .wide { grid-column: 1 / -1; }
+
+@media (max-width: 560px) {
+  .gallery { grid-template-columns: 1fr; }
+}
 
 .back { display: inline-block; margin-top: 48px; color: var(--muted); }
 
