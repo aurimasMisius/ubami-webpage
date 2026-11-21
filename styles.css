@@ -2,7 +2,7 @@
 
 :root {
   --text: #111;
-  --muted: #777;
+  --muted: #6b6b6b;
   --line: #e4e4e4;
   --placeholder: #ececec;
   --bg: #fff;
@@ -161,7 +161,7 @@ img { display: block; width: 100%; height: auto; }
 .team .person-bio { margin-top: 8px; }
 
 @media (max-width: 560px) {
-  .team { grid-template-columns: 1fr; }
+  .team { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
 }
 
 /* One-page overview (apzvalga.html) */
@@ -331,8 +331,9 @@ body.slides .site-header {
   z-index: 10;
   max-width: none;
   color: #fff;
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0));
-  padding-bottom: 40px;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.25) 55%, rgba(0,0,0,0));
+  padding-bottom: 48px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
 }
 body.slides .nav a:hover { color: rgba(255,255,255,0.7); }
 
