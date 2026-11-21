@@ -132,3 +132,24 @@ img { display: block; width: 100%; height: auto; }
   .site-header { padding-bottom: 36px; }
   .nav { gap: 16px; }
 }
+
+/* Team (studio page) */
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px var(--gutter);
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thumb.portrait { aspect-ratio: 3 / 4; }
+
+.team p { margin: 0; }
+.team .card-title { margin-top: 12px; }
+.team .person-bio { margin-top: 8px; }
+
+@media (max-width: 560px) {
+  .team { grid-template-columns: 1fr; }
+}
