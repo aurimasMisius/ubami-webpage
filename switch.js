@@ -5,7 +5,10 @@
     { file: 'index.html', label: 'Tinklelis' },
     { file: 'apzvalga.html', label: 'Ilgas puslapis' },
     { file: 'sarasas.html', label: 'Sąrašas' },
-    { file: 'skaidres.html', label: 'Skaidrės' }
+    { file: 'skaidres.html', label: 'Skaidrės' },
+    { file: 'linija.html', label: 'Linija' },
+    { file: 'medziagos.html', label: 'Medžiagos' },
+    { file: 'darbai.html', label: 'Studija ir darbai' }
   ];
   var KEY = 'ubami-version';
 
