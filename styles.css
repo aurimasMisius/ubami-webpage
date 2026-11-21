@@ -367,3 +367,65 @@ body.slides .nav a:hover { color: rgba(255,255,255,0.7); }
 .sl-name { display: block; font-weight: 500; }
 .sl-meta { display: block; opacity: 0.75; }
 .sl-count { opacity: 0.75; }
+
+/* V4: crossfade mode (enabled by slides.js) */
+
+body.sl-fade .sl-wrap { overflow: hidden; position: relative; }
+body.sl-fade .sl {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 1.2s;
+}
+body.sl-fade .sl.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
+}
+body.sl-fade .sl img {
+  transform: scale(1.06);
+  transition: transform 7s cubic-bezier(0.2, 0, 0.2, 1);
+}
+body.sl-fade .sl.is-active img { transform: scale(1); }
+body.sl-fade .sl-cap {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+body.sl-fade .sl.is-active .sl-cap {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.5s;
+}
+
+.sl-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, background 0.2s;
+}
+.sl-arrow:hover { opacity: 1; background: rgba(0, 0, 0, 0.45); }
+.sl-prev { left: var(--gutter); }
+.sl-next { right: var(--gutter); }
+
+@media (max-width: 700px) {
+  .sl-arrow { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.sl-fade .sl, body.sl-fade .sl.is-active { transition-duration: 0.3s; }
+  body.sl-fade .sl img { transform: none; transition: none; }
+}
