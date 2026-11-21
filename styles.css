@@ -92,7 +92,7 @@ img { display: block; width: 100%; height: auto; }
 
 .facts { margin: 8px 0 0; color: var(--muted); }
 .facts div { display: flex; gap: 8px; }
-.facts dt { min-width: 80px; }
+.facts dt { min-width: 104px; }
 .facts dd { margin: 0; color: var(--text); }
 
 .project-text p { margin: 0 0 1em; max-width: 60ch; }
