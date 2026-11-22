@@ -648,3 +648,71 @@ body.v-split {
 
 /* Keyboard focus, visible on every version */
 a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+/* ===== V8: Vaporwave — version 7 with neon covers that reveal the real photos ===== */
+
+.vw-hint { margin: -16px 0 0; color: var(--muted); font-size: 14px; }
+
+.vw-fig { margin: 0; }
+.vw-toggle {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #1a0636;
+  cursor: pointer;
+  overflow: hidden;
+}
+.vw-toggle img { display: block; width: 100%; height: auto; }
+.vw-art {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+  object-fit: cover;
+  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
+}
+/* scanlines over the artwork */
+.vw-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, rgba(20, 0, 40, 0.16) 0 1px, transparent 1px 3px);
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+}
+.vw-toggle:hover .vw-art { filter: saturate(1.25) hue-rotate(-12deg); }
+.vw-fig.is-real .vw-art {
+  opacity: 0;
+  transform: scale(1.04);
+  filter: blur(6px) hue-rotate(60deg);
+  pointer-events: none;
+}
+.vw-fig.is-real .vw-toggle::after { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .vw-fig.is-real .vw-toggle { animation: vw-glitch 0.45s steps(2, end); }
+}
+@keyframes vw-glitch {
+  0% { transform: translateX(0); clip-path: inset(0 0 0 0); }
+  20% { transform: translateX(-6px); clip-path: inset(12% 0 58% 0); }
+  40% { transform: translateX(5px); clip-path: inset(48% 0 22% 0); }
+  60% { transform: translateX(-3px); clip-path: inset(8% 0 70% 0); }
+  100% { transform: translateX(0); clip-path: inset(0 0 0 0); }
+}
+
+.vw-more { margin-top: 12px; }
+.vw-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.vw-thumbs img { aspect-ratio: 4 / 3; object-fit: cover; }
+.vw-thumbs:empty { display: none; }
+.vw-open { display: inline-block; margin-top: 12px; text-decoration: underline; text-underline-offset: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  .vw-more:not([hidden]) { animation: vw-in 0.5s ease both; }
+}
+@keyframes vw-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .vw-art, .vw-toggle::after { transition: none; }
+}

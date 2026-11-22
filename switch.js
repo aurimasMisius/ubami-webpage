@@ -8,7 +8,8 @@
     { file: 'skaidres.html', label: 'Skaidrės' },
     { file: 'linija.html', label: 'Linija' },
     { file: 'medziagos.html', label: 'Medžiagos' },
-    { file: 'darbai.html', label: 'Studija ir darbai' }
+    { file: 'darbai.html', label: 'Studija ir darbai' },
+    { file: 'vaporwave.html', label: 'Vaporwave' }
   ];
   var KEY = 'ubami-version';
 
