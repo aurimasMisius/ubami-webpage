@@ -4,17 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    // GitHub Pages shows this page for any missing address, at any depth, so links
-    // here are resolved from the site's root: /ubami-webpage/ on github.io, / on a
-    // domain of its own.
+    // GitHub Pages shows this page for any missing address. Visitors go straight to the
+    // homepage, which tells them briefly that the page wasn't found (#nerasta, see
+    // index.html). The page below is only seen with JavaScript off.
+    // The site's root: /ubami-webpage/ on github.io, / on a domain of its own.
     (function () {
       var root = location.pathname.indexOf('/ubami-webpage/') === 0 ? '/ubami-webpage/' : '/';
-      // The homepage versions that were compared before Linija was chosen: saved or
-      // shared links to them go to the homepage.
-      var page = location.pathname.split('/').pop();
-      var versions = ['apzvalga.html', 'sarasas.html', 'skaidres.html', 'linija.html',
-        'medziagos.html', 'darbai.html', 'vaporwave.html'];
-      if (versions.indexOf(page) !== -1) location.replace(root);
+      location.replace(root + '#nerasta');
       var base = document.createElement('base');
       base.href = root;
       document.head.appendChild(base);
@@ -25,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
   <header class="site-header wrap">

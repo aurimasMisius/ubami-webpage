@@ -245,5 +245,29 @@ body.v-linija .logo { letter-spacing: 0.22em; font-weight: 500; }
   .ln-title div:nth-child(2) { border-left: 0; }
 }
 
+/* Notice on the homepage after a missing address sent the visitor there (404.html) */
+.notice {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 10;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  padding: 12px 18px;
+  background: #141414;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.4;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: opacity 0.4s, transform 0.4s;
+}
+.notice.is-hidden { opacity: 0; transform: translate(-50%, 8px); }
+@media (prefers-reduced-motion: reduce) {
+  .notice { transition: none; }
+}
+
 /* Keyboard focus */
 a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
