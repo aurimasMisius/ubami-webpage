@@ -18,10 +18,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=11">
-  <script src="switch.js?v=3" defer></script>
+  <link rel="stylesheet" href="fonts/fonts.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
-<body>
+<body class="v-linija">
   <header class="site-header wrap">
     <a class="logo" href="index.html">UBAMI</a>
     <nav class="nav">
@@ -31,50 +31,70 @@
     </nav>
   </header>
   <main class="wrap">
-    <ul class="grid">
-      <li class="card">
-        <a href="projects/project-01.html">
-          <div class="thumb"><img src="images/project-01/cover.jpg" srcset="images/project-01/cover-480.jpg 480w, images/project-01/cover.jpg 960w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 50vw, 33vw" alt="Nedideli, jaukūs namai Joniškyje" width="960" height="720" loading="lazy"></div>
-          <p class="card-title">Nedideli, jaukūs namai Joniškyje</p>
-          <p class="card-meta">Joniškis, 2026</p>
-        </a>
-      </li>
-      <li class="card">
-        <a href="projects/project-02.html">
-          <div class="thumb"><img src="images/project-02/cover.jpg" srcset="images/project-02/cover-480.jpg 480w, images/project-02/cover.jpg 960w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 50vw, 33vw" alt="Namai miško apsuptyje" width="960" height="720" loading="lazy"></div>
-          <p class="card-title">Namai miško apsuptyje</p>
-          <p class="card-meta">2026</p>
-        </a>
-      </li>
-      <li class="card">
-        <a href="projects/project-03.html">
-          <div class="thumb"><img src="images/project-03/cover.jpg" srcset="images/project-03/cover-480.jpg 480w, images/project-03/cover.jpg 960w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 50vw, 33vw" alt="Ukmergės projektas" width="960" height="720" loading="lazy"></div>
-          <p class="card-title">Ukmergės projektas</p>
-          <p class="card-meta">Ukmergė, 2026</p>
-        </a>
-      </li>
-      <li class="card">
-        <a href="projects/project-04.html">
-          <div class="thumb"><img src="images/project-04/cover.jpg" srcset="images/project-04/cover-480.jpg 480w, images/project-04/cover.jpg 960w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 50vw, 33vw" alt="Namai Kauno šlaituose" width="960" height="720" loading="lazy"></div>
-          <p class="card-title">Namai Kauno šlaituose</p>
-          <p class="card-meta">Kaunas, 2026</p>
-        </a>
-      </li>
-      <li class="card">
-        <a href="projects/project-05.html">
-          <div class="thumb"><img src="images/project-05/cover.jpg" srcset="images/project-05/cover-480.jpg 480w, images/project-05/cover.jpg 960w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 50vw, 33vw" alt="Viršelio namas" width="960" height="720" loading="lazy"></div>
-          <p class="card-title">Viršelio namas</p>
-          <p class="card-meta">2024</p>
-        </a>
-      </li>
-      <li class="card">
-        <a href="projects/project-06.html">
-          <div class="thumb"><img src="images/project-06/cover.jpg" srcset="images/project-06/cover-480.jpg 480w, images/project-06/cover.jpg 960w" sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 900px) 50vw, 33vw" alt="Vikingo namas mieste" width="960" height="720" loading="lazy"></div>
-          <p class="card-title">Vikingo namas mieste</p>
-          <p class="card-meta">2023</p>
-        </a>
-      </li>
-    </ul>
+    <section class="ln-hero">
+      <svg class="mark" viewBox="-3 -3 112 106" role="img" aria-label="Ubami ženklas">
+        <path pathLength="1" d="M0 0 H106 V100 H0 Z"/>
+        <path pathLength="1" d="M28 0 V100"/>
+        <path pathLength="1" d="M78 0 V100"/>
+        <path pathLength="1" d="M0 39 L53 0 L106 39"/>
+        <path pathLength="1" d="M0 100 L53 58 L106 100"/>
+        <path pathLength="1" d="M0 58 L53 100 L106 58"/>
+      </svg>
+      <div class="ln-hero-text">
+        <h1>Ubami</h1>
+        <p>Architektūros studija Kaune</p>
+      </div>
+    </section>
+    <div class="ln-grid">
+      <a class="ln-sheet" href="projects/project-01.html">
+        <div class="ln-img"><img src="images/project-01/01.jpg" srcset="images/project-01/01-1000.jpg 1000w, images/project-01/01.jpg 2000w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="Nedideli, jaukūs namai Joniškyje" width="2000" height="926"></div>
+        <dl class="ln-title">
+          <div class="ln-name"><dt>Projektas</dt><dd>Nedideli, jaukūs namai Joniškyje</dd></div>
+          <div><dt>Vieta</dt><dd>Joniškis</dd></div>
+          <div><dt>Metai</dt><dd>2026</dd></div>
+        </dl>
+      </a>
+      <a class="ln-sheet" href="projects/project-02.html">
+        <div class="ln-img"><img src="images/project-02/01.jpg" srcset="images/project-02/01-1000.jpg 1000w, images/project-02/01.jpg 1520w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="Namai miško apsuptyje" width="1520" height="704"></div>
+        <dl class="ln-title">
+          <div class="ln-name"><dt>Projektas</dt><dd>Namai miško apsuptyje</dd></div>
+          <div><dt>Vieta</dt><dd>—</dd></div>
+          <div><dt>Metai</dt><dd>2026</dd></div>
+        </dl>
+      </a>
+      <a class="ln-sheet" href="projects/project-03.html">
+        <div class="ln-img"><img src="images/project-03/01.jpg" srcset="images/project-03/01-1000.jpg 1000w, images/project-03/01.jpg 2000w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="Ukmergės projektas" width="2000" height="849"></div>
+        <dl class="ln-title">
+          <div class="ln-name"><dt>Projektas</dt><dd>Ukmergės projektas</dd></div>
+          <div><dt>Vieta</dt><dd>Ukmergė</dd></div>
+          <div><dt>Metai</dt><dd>2026</dd></div>
+        </dl>
+      </a>
+      <a class="ln-sheet" href="projects/project-04.html">
+        <div class="ln-img"><img src="images/project-04/01.jpg" srcset="images/project-04/01-1000.jpg 1000w, images/project-04/01.jpg 2000w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="Namai Kauno šlaituose" width="2000" height="849" loading="lazy"></div>
+        <dl class="ln-title">
+          <div class="ln-name"><dt>Projektas</dt><dd>Namai Kauno šlaituose</dd></div>
+          <div><dt>Vieta</dt><dd>Kaunas</dd></div>
+          <div><dt>Metai</dt><dd>2026</dd></div>
+        </dl>
+      </a>
+      <a class="ln-sheet" href="projects/project-05.html">
+        <div class="ln-img"><img src="images/project-05/01.jpg" srcset="images/project-05/01-1000.jpg 1000w, images/project-05/01.jpg 2000w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="Viršelio namas" width="2000" height="1500" loading="lazy"></div>
+        <dl class="ln-title">
+          <div class="ln-name"><dt>Projektas</dt><dd>Viršelio namas</dd></div>
+          <div><dt>Vieta</dt><dd>—</dd></div>
+          <div><dt>Metai</dt><dd>2024</dd></div>
+        </dl>
+      </a>
+      <a class="ln-sheet" href="projects/project-06.html">
+        <div class="ln-img"><img src="images/project-06/01.jpg" srcset="images/project-06/01-1000.jpg 1000w, images/project-06/01.jpg 2000w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="Vikingo namas mieste" width="2000" height="1493" loading="lazy"></div>
+        <dl class="ln-title">
+          <div class="ln-name"><dt>Projektas</dt><dd>Vikingo namas mieste</dd></div>
+          <div><dt>Vieta</dt><dd>—</dd></div>
+          <div><dt>Metai</dt><dd>2023</dd></div>
+        </dl>
+      </a>
+    </div>
   </main>
   <footer class="site-footer wrap">© 2026 Ubami</footer>
 </body>
