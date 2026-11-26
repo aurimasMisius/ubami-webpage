@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="fonts/fonts.css?v=4">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body class="v-linija">
   <header class="site-header wrap">
@@ -97,5 +97,26 @@
     </div>
   </main>
   <footer class="site-footer wrap">© 2026 Ubami</footer>
+  <script>
+    // Sent here from a missing address (404.html): say so for a few seconds.
+    (function () {
+      if (location.hash !== '#nerasta') return;
+      history.replaceState(null, '', location.pathname + location.search);
+      var note = document.createElement('p');
+      note.className = 'notice is-hidden';
+      note.setAttribute('role', 'status');
+      document.body.appendChild(note);
+      setTimeout(function () {
+        note.textContent = 'Puslapis nerastas, todėl nukreipėme jus į pradžios puslapį.';
+        note.classList.remove('is-hidden');
+      }, 50);
+      function hide() {
+        note.classList.add('is-hidden');
+        setTimeout(function () { note.remove(); }, 500);
+      }
+      setTimeout(hide, 5000);
+      note.addEventListener('click', hide);
+    })();
+  </script>
 </body>
 </html>

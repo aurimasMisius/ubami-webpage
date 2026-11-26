@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // GitHub Pages shows this page for any missing address. Visitors go straight to the
+    // homepage, which tells them briefly that the page wasn't found (#nerasta, see
+    // index.html). The page below is only seen with JavaScript off.
+    // The site's root: /ubami-webpage/ on github.io, / on a domain of its own.
+    (function () {
+      var root = location.pathname.indexOf('/ubami-webpage/') === 0 ? '/ubami-webpage/' : '/';
+      location.replace(root + '#nerasta');
+      var base = document.createElement('base');
+      base.href = root;
+      document.head.appendChild(base);
+    })();
+  </script>
+  <title>Puslapis nerastas — Ubami</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=13">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="logo" href="index.html">UBAMI</a>
+    <nav class="nav">
+      <a href="index.html">Projektai</a>
+      <a href="studio.html">Studija</a>
+      <a href="contact.html">Kontaktai</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <div class="page">
+      <h1>Puslapis nerastas</h1>
+      <p>Tokio puslapio nėra. Gal jis buvo perkeltas arba adresas įvestas su klaida.</p>
+      <p><a href="index.html">← Visi projektai</a></p>
+    </div>
+  </main>
+  <footer class="site-footer wrap">© 2026 Ubami</footer>
+</body>
+</html>
